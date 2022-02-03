@@ -1,8 +1,19 @@
 import type { NextPage } from 'next'
-import { HomeTemplate } from 'src/templates/HomeTemplate'
+import Head from 'next/head'
+import { HeaderComponent } from 'src/components/HeaderComponent'
 
 const Home: NextPage = () => {
-  return <HomeTemplate />
+  return (
+    <div>
+      <Head>
+        <title>Início | ig.news</title>
+      </Head>
+
+      <HeaderComponent />
+
+      <p>home</p>
+    </div>
+  )
 }
 
 export default Home
