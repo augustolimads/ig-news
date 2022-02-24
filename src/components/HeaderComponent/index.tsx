@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { NavLinkComponent } from '../NavLinkComponent'
+import { SignInButtonComponent } from '../SignInButtonComponent'
 
 export const HeaderComponent = () => {
   return (
-    <header>
-      <div className="container mx-auto flex items-center">
+    <header className="absolute w-full">
+      <div className="container mx-auto flex items-center ">
         <Link href="/" passHref>
           <Image
             src="/images/logo.svg"
@@ -23,6 +24,9 @@ export const HeaderComponent = () => {
             <NavLinkComponent>Post</NavLinkComponent>
           </Link>
         </nav>
+        <div className="ml-auto">
+          <SignInButtonComponent />
+        </div>
       </div>
     </header>
   )
