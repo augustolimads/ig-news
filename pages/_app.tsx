@@ -4,6 +4,8 @@ import Head from 'next/head'
 import { Provider } from 'react-redux'
 import { store } from 'src/store/index'
 import { Hooks } from 'src/hooks'
+import { HeaderComponent } from 'src/components/HeaderComponent'
+import { LayoutBaseComponent } from 'src/components/LayoutBaseComponent'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             content="A simple project starter to work with typescript, React, NextJs, Redux Toolkit and Material UI"
           />
         </Head>
-        <Component {...pageProps} />
+        <LayoutBaseComponent>
+          <Component {...pageProps} />
+        </LayoutBaseComponent>
       </Hooks>
     </Provider>
   )
