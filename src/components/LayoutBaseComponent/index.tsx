@@ -8,7 +8,7 @@ export const LayoutBaseComponent = ({ children }: Props) => {
   return (
     <div className="relative">
       <HeaderComponent />
-      {children}
+      <main className="container mx-auto">{children}</main>
     </div>
   )
 }

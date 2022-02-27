@@ -21,7 +21,7 @@ const Home = ({ product }: Props) => {
         <title>Home | ig.news</title>
       </Head>
 
-      <main className="container mx-auto flex items-center justify-between h-screen">
+      <div className="flex items-center justify-between min-h-screen">
         <section>
           <span className="text-2xl">👏 Hey, welcome</span>
           <h1 className="text-7xl font-black">
@@ -37,7 +37,7 @@ const Home = ({ product }: Props) => {
           <SubscriptionButtonComponent priceId={product.priceId} />
         </section>
         <img src="/images/avatar.svg" alt="woman on computer" />
-      </main>
+      </div>
     </>
   )
 }
@@ -52,7 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
     amount: price.unit_amount && price.unit_amount / 100
   }
 
-  console.log(product)
   return {
     props: { product },
     revalidate: 60 * 60 * 24 // 24h
