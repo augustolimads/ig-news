@@ -18,10 +18,14 @@ export const HeaderComponent = () => {
         </Link>
         <nav className="ml-20 h-20 flex items-center justify-center space-x-6">
           <Link href="/" passHref>
-            <NavLinkComponent isActive={true}>Home</NavLinkComponent>
+            <a>
+              <NavLinkComponent isActive={true}>Home</NavLinkComponent>
+            </a>
           </Link>
-          <Link href="/" passHref>
-            <NavLinkComponent>Post</NavLinkComponent>
+          <Link href="posts" passHref>
+            <a>
+              <NavLinkComponent>Post</NavLinkComponent>
+            </a>
           </Link>
         </nav>
         <div className="ml-auto">

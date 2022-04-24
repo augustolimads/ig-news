@@ -11,7 +11,7 @@ export const NavLinkComponent = ({ children, isActive }: props) => {
   `
 
   return (
-    <a
+    <span
       className={`
         inline-block relative px-2 leading-[5rem] cursor-pointer text-gray-300 transition-colors h-20
         hover:text-white
@@ -19,6 +19,6 @@ export const NavLinkComponent = ({ children, isActive }: props) => {
       `}
     >
       {children}
-    </a>
+    </span>
   )
 }
