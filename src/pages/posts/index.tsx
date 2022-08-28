@@ -4,7 +4,7 @@ import Head from 'next/head'
 const list = [1, 2, 3]
 
 export async function getStaticProps() {
-  const client = createClient('')
+  const client = createClient(process.env.PRISMIC_REPOSITORY || '')
 
   const page = await client.getAllByType('post')
 
