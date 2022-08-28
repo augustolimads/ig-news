@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 const list = [1, 2, 3]
 
-export async function getStaticProps({}) {
+export async function getStaticProps() {
   const client = createClient('')
 
   const page = await client.getAllByType('post')
